@@ -1,1 +1,46 @@
-[{"id":"ef1ce071-672f-462f-88a4-a5b0c90b6efc","username":"Max","age":32,"hobbies":["frontend","backend"]}]
+[
+  {
+    "id": "ef1ce071-672f-462f-88a4-a5b0c90b6efc",
+    "username": "Max",
+    "age": 32,
+    "hobbies": [
+      "frontend",
+      "backend"
+    ]
+  },
+  {
+    "username": "Xam",
+    "age": 23,
+    "hobbies": [
+      "frontend",
+      "rightsidend"
+    ]
+  },
+  {
+    "id": "78e6e02c-3ec6-44e6-a058-51082e499e0f",
+    "username": "Max",
+    "age": 32,
+    "hobbies": [
+      "frontend",
+      "backend"
+    ]
+  },
+  {
+    "id": "a8a738c6-672e-4364-b1fc-71c7264457ef",
+    "username": "Max",
+    "age": 32,
+    "hobbies": [
+      "frontend",
+      "backend"
+    ]
+  },
+  {
+    "id": "1aab7a1f-eb14-4523-a2a1-81f03c5bd880",
+    "username": "Hurry",
+    "age": 48,
+    "hobbies": [
+      "leftsidend",
+      "backend"
+    ]
+  }
+]
