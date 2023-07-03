@@ -15,27 +15,35 @@ export const routes = (request, response) => {
     case 'POST': {
       if (reqURL === '/api/users') {
         postHandler(request, response);
+      } else {
+        defaultHandler(request, response);
       }
       break;
     }
     case 'GET': {
-      if (reqURL === '/api/users') {
-        getHandler(request, response);
-      }
-      if (reqURL.startsWith('/api/users/')) {
+      if (reqURL.startsWith('/api/users') && reqURL.split('/').length > 3 && reqURL.split('/').at(-1) !== '') {
         getByIdHandler(request, response);
+      } else if (reqURL.startsWith('/api/users') && reqURL.split('/').length < 5) {
+        console.log(reqURL.split('/'))
+        getHandler(request, response);
+      } else {
+        defaultHandler(request, response);
       }
       break;
     }
     case 'PUT': {
       if (reqURL.startsWith('/api/users/')) {
-         putHandler(request, response);
+        putHandler(request, response);
+      } else {
+        defaultHandler(request, response);
       }
       break;
     }
     case 'DELETE': {
       if (reqURL.startsWith('/api/users/')) {
         deleteHandler(request, response);
+      } else {
+        defaultHandler(request, response);
       }
       break;
     }
