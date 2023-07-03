@@ -1,4 +1,4 @@
-export const userFieldsValidator = (body) => {
+export const userFieldsValidator = (body: string) => {
   const { username, age, hobbies } = JSON.parse(body);
 
   if (typeof username !== 'string' || !username ) {
