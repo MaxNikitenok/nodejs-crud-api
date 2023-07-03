@@ -1,12 +1,12 @@
 import { createServer } from 'http';
 import { routes } from './routes.js';
 
-const PORT = 4000;
+const PORT = process.env.PORT || 3001
 
 export const server = createServer((request, response) => {
   routes(request, response);
 });
 
-server.listen(4000, () => {
+server.listen(PORT, () => {
   console.log(`Server is running on Port ${PORT}`);
 });

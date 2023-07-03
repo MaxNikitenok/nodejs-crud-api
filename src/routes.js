@@ -4,6 +4,7 @@ import {
   defaultHandler,
   putHandler,
   deleteHandler,
+  getByIdHandler,
 } from './controller.js';
 
 export const routes = (request, response) => {
@@ -21,16 +22,19 @@ export const routes = (request, response) => {
       if (reqURL === '/api/users') {
         getHandler(request, response);
       }
+      if (reqURL.startsWith('/api/users/')) {
+        getByIdHandler(request, response);
+      }
       break;
     }
     case 'PUT': {
       if (reqURL.startsWith('/api/users/')) {
-        putHandler(request, response);
+         putHandler(request, response);
       }
       break;
     }
     case 'DELETE': {
-      if (reqURL === '/api/users') {
+      if (reqURL.startsWith('/api/users/')) {
         deleteHandler(request, response);
       }
       break;
